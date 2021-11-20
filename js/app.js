@@ -19,6 +19,17 @@ output.addEventListener('click',(e)=>{
       console.log(id);
       removeItem(e,id);
     }
+    if(e.target.classList.contains("task")){
+        togleTaskStatus(e.target.getAttribute("data-id"));
+        e.target.classList.toggle("done");
+    }
+
+
+
+
+
+
+
 });
 
 function removeItem(e,id){
@@ -79,16 +90,22 @@ function addToPage(array){
 
     let taskDiv = document.createElement("div");
     taskDiv.classList.add("task");
+   
     taskDiv.setAttribute("data-id",ele.id);
     let taskTitle = document.createTextNode(ele.title);
     taskDiv.appendChild(taskTitle);
     let span = document.createElement("span");
     span.classList.add("del");
+    // spanText = document.createTextNode("Delet");
     spanText = document.createTextNode("Delet");
     span.appendChild(spanText);
     taskDiv.appendChild(span);
     output.appendChild(taskDiv);
 
+    if(ele.done){
+        taskDiv.classList.add("done");
+    }
+    
    });
 }
 
@@ -102,6 +119,26 @@ if(data){
 }
 
 };
+
+
+function  togleTaskStatus(id){
+taskArray.forEach((task) => {
+console.log( "This is an id", task.id);
+if(task.id == id){
+    console.log("the receved id is ",id)
+    console.log(task.done);
+  
+    task.done == false ? (task.done = true) : (task.done = false);
+    console.log(task.done);
+}
+}
+
+)
+
+addArrayToStorage(taskArray);
+};
+
+
 
 
 getArrayFromLocalStorage();

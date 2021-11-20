@@ -15,7 +15,7 @@
     
     body {
         background-color: rgb(139 124 239);
-        padding-bottom: 140px;
+        
     }
     
     
@@ -85,9 +85,11 @@ header .container h3 {
     padding: 3px;
 }
 header .container h3 span {
-    color: red;
+    color: rgb(252, 63, 63);
 }
-
+header .container i {
+    color: white;
+}
 
 
 
@@ -99,7 +101,7 @@ header .container h3 span {
 
 .img {
     margin-top: 1px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     height: 400px;
     padding: 1px;
     /* background-color: #e6e6e6; */
@@ -134,18 +136,18 @@ header .container h3 span {
     position: absolute;
     left: 4%;
     top: 40%;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
     color: #efefef;
     text-align: center;
 }
 .img  h2 P {
-    color: #efefef;
+    color: #ffffffb8;
     font-size: 23px;
     padding: 5px;
 }
 .img  h2 P strong {
-    color: #d50e0eb8;
+    color: #ffffffb8;
     font-size: 23px;
 }
 
@@ -281,6 +283,9 @@ section .container .output .task {
     border-radius: 4px;
     font-family: 'Open Sans', sans-serif;
 }
+section .container .output .task:hover {
+    cursor: pointer;
+}
 
 
 section .container  .output .task:nth-child(odd){
@@ -295,7 +300,9 @@ section .container .output .task:nth-child(2n+5){
 
 
 section .container .output .task.done {
-    background-color: red;
+    background-color: rgb(129, 129, 129);
+    text-decoration: line-through;
+    color: black;
 }
 
 
@@ -309,9 +316,134 @@ section .container .output .task .del {
     text-align: center;
     width: 100px;
     border-radius: 4px;
+   
 }
+
 
 section .container .output .task .del:hover {
     cursor: pointer;
     background-color: rgb(139, 5, 5);
+}
+
+
+footer {
+    background-color: rgb(36, 36, 36);
+    margin-top: 60px;
+}
+
+footer .container {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+@media (max-width: 600px){
+    footer .container {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    footer .container p {
+        text-align: center;
+    }
+}
+
+
+
+
+
+footer .container p {
+color: white;
+width: 50%;
+font-size: 16px;
+display: inline-block;
+margin-right: 2px;
+}
+footer .container p i {
+    color: red;
+}
+
+footer .container .icons {
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+footer .container .icons a {
+    text-decoration: none;
+}
+
+
+footer .container .icons a li {
+    margin-right: 5px;
+    height: 100%;
+    padding: 2px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    justify-content: center;
+}
+
+/* footer .container .icons a li i:hover {
+ 
+} */
+
+.fa-facebook-square{
+    content: "\f082";
+    color: #c8c8c8;
+}
+.fa-facebook-square:hover{
+    color: blue;
+}
+
+
+
+
+
+
+
+.fa-instagram{
+    content: "\f16d";
+    color: #c8c8c8;
+}
+.fa-instagram:hover {
+    content: "\f16d";
+    color: #d32f2f;
+}
+
+
+
+
+
+
+.fa-youtube {
+    content: "\f167";
+    color: #c8c8c8;
+}
+.fa-youtube:hover{
+    content: "\f167";
+    color: red;
+}
+
+
+
+
+
+
+
+.fa-envelope{
+    content: "\f0e0";
+    color: #c8c8c8;
+}
+
+.fa-envelope:hover{
+    content: "\f0e0";
+    color: #4c01ff;
 }
