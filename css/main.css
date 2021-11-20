@@ -247,6 +247,7 @@ section .container {
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 4px;
+    box-shadow: 6px 10px 30px rgb(43 43 43 / 51%);
 }
 
 
@@ -254,7 +255,6 @@ section .container .output {
     background-color: #cdcdcd;
     margin: 20px auto;
     border-radius: 4px;
-    
 }
 
 @media (max-width: 800px){
@@ -400,7 +400,7 @@ footer .container .icons a li {
     color: #c8c8c8;
 }
 .fa-facebook-square:hover{
-    color: blue;
+    color: #352bbe;
 }
 
 
@@ -445,5 +445,5 @@ footer .container .icons a li {
 
 .fa-envelope:hover{
     content: "\f0e0";
-    color: #4c01ff;
+    color: #ffffff;
 }
